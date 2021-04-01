@@ -20,6 +20,10 @@ Zotero.Jasminum = {
         Zotero.Jasminum.initPref();
         Components.utils.import("resource://gre/modules/osfile.jsm");
         Zotero.Jasminum.CNDB = ["CNKI"];
+        // Load Property file
+        Zotero.Jasminum.stringsBundle = Components.classes['@mozilla.org/intl/stringbundle;1']
+            .getService(Components.interfaces.nsIStringBundleService)
+            .createBundle('chrome://jasminum/locale/jasminum.properties');
         Zotero.debug("Init Jasminum ...");
     },
 
